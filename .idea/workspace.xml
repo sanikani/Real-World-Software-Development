@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccf2c2bc-e87e-40cc-b56d-a0b01303ca2b" name="Changes" comment="추가 요구사항 구현">
+    <list default="true" id="ccf2c2bc-e87e-40cc-b56d-a0b01303ca2b" name="Changes" comment="클래스 분리, 응집도 개선">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Real-World-Software-Development.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter_02/BankStatementCSVParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chapter_02/BankStatementCSVParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter_02/BankTransactionAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chapter_02/BankTransactionAnalyzer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,33 +47,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/develop/workspace/Real-World-Software-Development/src/main/java/chapter_03",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/develop/workspace/Real-World-Software-Development&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\develop\workspace\Real-World-Software-Development\src\main\java\chapter_03" />
-      <recent name="C:\develop\workspace\Real-World-Software-Development\src\main\java" />
       <recent name="C:\develop\workspace\Real-World-Software-Development" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -78,7 +81,7 @@
       <recent name="chapter_02" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainApplication">
+  <component name="RunManager" selected="JUnit.BankStatementCSVParserTest.shouldParseOneCorrectLine">
     <configuration name="BankTransactionAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter_02.BankTransactionAnalyzer" />
       <module name="Real-World-Software-Development" />
@@ -153,9 +156,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainApplication" />
         <item itemvalue="JUnit.BankStatementCSVParserTest.shouldParseOneCorrectLine" />
         <item itemvalue="JUnit.BankTransactionCSVParserTest" />
+        <item itemvalue="Application.MainApplication" />
         <item itemvalue="Application.BankTransactionAnalyzer" />
         <item itemvalue="Application.BankTransactionAnalyzerSimple" />
       </list>
@@ -171,12 +174,7 @@
       <updated>1689226236960</updated>
       <workItem from="1689226237969" duration="6411000" />
       <workItem from="1689342341106" duration="3353000" />
-      <workItem from="1689346367942" duration="1633000" />
-      <workItem from="1689404179315" duration="11000" />
-      <workItem from="1689650139258" duration="126000" />
-      <workItem from="1689650273387" duration="7068000" />
-      <workItem from="1689671214951" duration="3000" />
-      <workItem from="1689747386653" duration="2733000" />
+      <workItem from="1689346367942" duration="1094000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1689226548489</created>
@@ -192,21 +190,7 @@
       <option name="project" value="LOCAL" />
       <updated>1689237655126</updated>
     </task>
-    <task id="LOCAL-00003" summary="결합도 개선, 테스트 구현">
-      <created>1689347618347</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1689347618347</updated>
-    </task>
-    <task id="LOCAL-00004" summary="추가 요구사항 구현">
-      <created>1689670954277</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1689670954277</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,16 +210,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="클래스 분리, 응집도 개선" />
-    <MESSAGE value="결합도 개선, 테스트 구현" />
-    <MESSAGE value="추가 요구사항 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="추가 요구사항 구현" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="bankStatementProcessor.bankTransactions.get(3)" />
-      </configuration>
-    </watches-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="클래스 분리, 응집도 개선" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
