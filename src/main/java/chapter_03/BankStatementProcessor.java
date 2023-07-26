@@ -53,6 +53,7 @@ public class BankStatementProcessor {
                 }
             }
         }
+
         return max;
     }
     public double calculateMinInRange(final LocalDate startDate, final LocalDate endDate) {

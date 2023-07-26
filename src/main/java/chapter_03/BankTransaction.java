@@ -48,4 +48,15 @@ public class BankTransaction {
         return Double.compare(that.amount, amount) == 0 &&
                 date.equals(that.date) && description.equals(that.description);
     }
+
+    public Notification validate(){
+        Notification notification = new Notification();
+        if (this.description.length() > 100) {
+            notification.addError("The description is too long");
+        }
+
+        final LocalDate parsedDate;
+        return notification;
+
+    }
 }
