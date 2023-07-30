@@ -1,6 +1,7 @@
 package chapter_03;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.Objects;
 
 public class BankTransaction {
@@ -49,14 +50,5 @@ public class BankTransaction {
                 date.equals(that.date) && description.equals(that.description);
     }
 
-    public Notification validate(){
-        Notification notification = new Notification();
-        if (this.description.length() > 100) {
-            notification.addError("The description is too long");
-        }
 
-        final LocalDate parsedDate;
-        return notification;
-
-    }
 }
